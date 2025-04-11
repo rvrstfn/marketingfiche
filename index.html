@@ -433,14 +433,25 @@ Write a detailed analysis of this product from a marketing point of view.`
             console.log(`%c🧹 CLEAR CHAT BUTTON CLICKED`, 'color: red; font-weight: bold;');
             console.log(`📚 Clearing chat history array (was ${chatHistory.length} messages)`);
             chatHistory = [];
+            
+            // Reset to technical phase
+            const oldPhase = currentPhase;
+            currentPhase = "technical";
+            console.log(`🔄 Resetting to technical phase (was ${oldPhase})`);
+            
+            // Update UI to show technical phase is active
+            phaseButtons.forEach(btn => btn.classList.remove('active'));
+            document.querySelector('.phase-btn[data-phase="technical"]').classList.add('active');
+            console.log(`🎨 Updated UI to show technical phase is active`);
+            
             console.log(`🗑️ Clearing chat messages from DOM`);
             chatMessages.innerHTML = `
                 <div class="message assistant-message">
                     Welcome to the Intercos Group assistant! I can help with product documentation.<br><br>
-                    You can change phases by using the buttons above.
+                    The system is in technical phase. Paste your TDS document to begin.
                 </div>
             `;
-            console.log(`✅ Chat cleared, welcome message restored`);
+            console.log(`✅ Chat cleared, welcome message restored, now in technical phase`);
         });
 
         phaseButtons.forEach(button => {
