@@ -1,0 +1,114 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.chat-container {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.chat-messages {
+    flex-grow: 1;
+    overflow-y: auto;
+    padding: 15px;
+    background-color: #f9f9f9;
+}
+
+.message {
+    margin-bottom: 15px;
+    padding: 10px 15px;
+    border-radius: 18px;
+    max-width: 80%;
+    line-height: 1.5;
+}
+
+.user-message {
+    background-color: #e1f5fe;
+    margin-left: auto;
+    border-bottom-right-radius: 5px;
+}
+
+.assistant-message {
+    background-color: #f1f1f1;
+    margin-right: auto;
+    border-bottom-left-radius: 5px;
+}
+
+.input-area {
+    display: flex;
+    padding: 10px;
+    background-color: #fff;
+    border-top: 1px solid #ddd;
+}
+
+.input-area textarea {
+    flex-grow: 1;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 10px;
+    margin-right: 10px;
+    resize: none;
+}
+
+.input-area button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 0 20px;
+    cursor: pointer;
+}
+
+.loading {
+    text-align: center;
+    padding: 10px;
+    font-style: italic;
+    color: #666;
+}
+
+.phase-buttons {
+    display: flex;
+    margin-bottom: 15px;
+    gap: 10px;
+}
+
+.phase-btn {
+    background-color: #f8f9fa;
+    border: 1px solid #ddd;
+    padding: 8px 16px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.phase-btn:hover, .phase-btn.active {
+    background-color: #e9ecef;
+    border-color: #adb5bd;
+}
+
+.phase-btn.active {
+    font-weight: bold;
+    color: #1a73e8;
+}
+
+.api-key-container {
+    margin-bottom: 20px;
+    padding: 15px;
+    background-color: #fcf8e3;
+    border: 1px solid #faebcc;
+    border-radius: 4px;
+}
+
+.chat-controls {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
